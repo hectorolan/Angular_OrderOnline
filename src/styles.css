@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.background-transparent {
+  background-color: transparent;
+}
+
+.no-border {
+  border: 0px;
+}
+
+.drawer {
+  top: 64px !important;
+ }
+ 
+ @media(max-width: 599px) {
+   .drawer {
+     top: 56px !important;
+   }
+ }
+.side-drawer{
+  width: 250px;
+}
+
+.margin-auto {
+  margin: auto;
+}
