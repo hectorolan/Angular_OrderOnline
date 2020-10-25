@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Pancakes",
+    "contains": "strawberries, nuts, chocolate fudge",
+    "description": "",
+    "photourl": "",
+    "price": 7.99,
+    "category":"Breakfast",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Coke",
+    "contains": "",
+    "description": "",
+    "photourl": "",
+    "price": 1.99,
+    "category":"Drinks",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Ham & Cheese",
+    "contains": "Wheat bread, virginia ham, chedar cheese, butter",
+    "description": "",
+    "photourl": "",
+    "price": 8.99,
+    "category":"Sandwiches",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Chicken",
+    "contains": "Swiss chees, crispy chicken",
+    "description": "",
+    "photourl": "",
+    "price": 9.99,
+    "category":"Sandwiches",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 5,
+    "name": "Rice & Beans with biftec",
+    "contains": "",
+    "description": "",
+    "photourl": "",
+    "price": 12.99,
+    "category":"Meals",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "Vegetable Lasagna",
+    "contains": "",
+    "description": "",
+    "photourl": "",
+    "price": 6.99,
+    "category":"Meals",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 7,
+    "name": "Orange Juice",
+    "contains": "",
+    "description": "",
+    "photourl": "",
+    "price": 2.99,
+    "category":"Drinks",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 8,
+    "name": "Beer Mic",
+    "contains": "",
+    "description": "",
+    "photourl": "",
+    "price": 3.99,
+    "category":"Drinks",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 9,
+    "name": "Dark Chocolate Cake",
+    "contains": "",
+    "description": "",
+    "photourl": "",
+    "price": 2.99,
+    "category":"Deserts",
+    "display": true,
+    "available": true
+  },
+  {
+    "id": 10,
+    "name": "Apple Pie with Ice cream",
+    "contains": "",
+    "description": "",
+    "photourl": "",
+    "price": 3.99,
+    "category":"Deserts",
+    "display": true,
+    "available": true
+  }
+]

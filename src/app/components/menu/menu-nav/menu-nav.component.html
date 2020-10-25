@@ -1,0 +1,37 @@
+<mat-drawer-container [ngClass]="['background-transparent', 'drawer']" [hasBackdrop]="false" fullscreen>
+    <mat-drawer #drawer [mode]="'side'" opened [ngClass]="['background-transparent','no-border', 'side-drawer']">
+        <mat-selection-list #sidemenuselection [multiple]="false">
+            <mat-list-option [value]="'menu'">
+                <mat-icon>menu</mat-icon>
+            </mat-list-option>
+            <mat-list-option [value]="'fav'">
+                <mat-icon>favorite</mat-icon>
+            </mat-list-option>
+            <mat-list-option [value]="'share'">
+                <mat-icon>share</mat-icon>
+            </mat-list-option>
+            <!--<mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                {{shoe}}
+            </mat-list-option>-->
+        </mat-selection-list>
+    </mat-drawer>
+    <mat-drawer-content [ngClass]="'background-transparent'">
+        <mat-toolbar [ngClass]="['background-transparent']">
+            <div ngClass="margin-auto">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon favorite-icon"
+                    aria-label="Example icon-button with heart icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon>share</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar>
+        <p>menu-nav works!</p>
+        <!--<button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>-->
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
