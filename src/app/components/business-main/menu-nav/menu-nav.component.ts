@@ -15,7 +15,7 @@ export class MenuNavComponent implements OnInit, AfterViewInit {
   @ViewChild('drawer') public drawer: MatSidenav;
   @Input() drawerState;
   categories: any;
-  selectedCategory: string;
+  selectedPage: string;
 
   constructor(private businessDataService: BusinessDataService, private navDrawerService: NavDrawerService) { }
   
@@ -24,8 +24,13 @@ export class MenuNavComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.selectedCategory = "Menu";
+    this.selectedPage = "Menu";
     this.categories = this.businessDataService.getMenuCategories(1);
+  }
+
+  onSelectDrawerPage(page: any): void{
+    this.selectedPage=page; 
+    this.navDrawerService.close();
   }
 
 }

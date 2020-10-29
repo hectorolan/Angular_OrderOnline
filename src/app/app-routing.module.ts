@@ -46,6 +46,7 @@ const routes: Routes = [
     ],
   },
   //{ path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '**',    redirectTo: '/business', pathMatch: 'full' },
   //{ path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 

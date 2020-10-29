@@ -1,7 +1,7 @@
-<mat-drawer-container [ngClass]="['background-transparent', 'drawer']" [hasBackdrop]="false" fullscreen>
-        <mat-drawer #drawer [mode]="'side'" [ngClass]="['background-transparent','no-border', 'side-drawer']">
+<mat-drawer-container [ngClass]="['background-transparent', 'drawer']" [hasBackdrop]="true" fullscreen>
+        <mat-drawer #drawer [mode]="'over'" [ngClass]="['background-white','no-border', 'side-drawer']"> <!-- over, side, push -->
             <mat-selection-list #sidemenuselection [multiple]="false">
-                <mat-list-option [value]='category' *ngFor='let category of categories' (click)='selectedCategory = category.category'>
+                <mat-list-option [value]='category' *ngFor='let category of categories' (click)='onSelectDrawerPage(category.category)'>
                     {{ category.category }}
                 </mat-list-option>
             </mat-selection-list>
@@ -11,14 +11,14 @@
                 <mat-toolbar [ngClass]="['background-transparent']">
                     <div [ngClass]="'margin-auto'">                
                     <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-                        <mat-button-toggle  *ngFor='let category of categories'  (click)='selectedCategory = category.category'>
+                        <mat-button-toggle  *ngFor='let category of categories'  (click)='selectedPage=category.category'>
                             {{category.category}}
                         </mat-button-toggle>
                     </mat-button-toggle-group>                 
                     </div>
                 </mat-toolbar>
                 <!--<button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>-->
-                <app-menu-items [category]="selectedCategory"></app-menu-items>
+                <app-menu-items [category]="selectedPage"></app-menu-items>
             </div>
         </mat-drawer-content>
 </mat-drawer-container>
