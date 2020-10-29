@@ -9,11 +9,12 @@ import { AdminNavComponent } from './components/admin/admin-nav/admin-nav.compon
 import { AdminMenuCategoriesComponent } from './components/admin/admin-menu-categories/admin-menu-categories.component';
 import { AdminMenuItemsComponent } from './components/admin/admin-menu-items/admin-menu-items.component';
 import { AdminMenuItemComponent } from './components/admin/admin-menu-item/admin-menu-item.component';
-import { MenuNavComponent } from './components/menu/menu-nav/menu-nav.component';
-import { MenuItemsComponent } from './components/menu/menu-items/menu-items.component';
-import { UserCartComponent } from './components/user/user-cart/user-cart.component';
-import { UserInfoComponent } from './components/user/user-info/user-info.component';
-import { MaterialModule } from './material.module';
+import { MenuNavComponent } from './components/business-main/menu-nav/menu-nav.component';
+import { MenuItemsComponent } from './components/business-main/menu-items/menu-items.component';
+import { UserCartComponent } from './components/business-main/user-cart/user-cart.component';
+import { UserInfoComponent } from './components/business-main/user-info/user-info.component';
+import { MaterialModule } from './modules/material.module';
+import { BusinessMainComponent } from './components/business-main/business-main.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { MaterialModule } from './material.module';
     AdminMenuCategoriesComponent,
     AdminMenuItemsComponent,
     AdminMenuItemComponent,
+    BusinessMainComponent,
     MenuNavComponent,
     MenuItemsComponent,
     UserCartComponent,

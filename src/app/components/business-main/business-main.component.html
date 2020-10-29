@@ -1,0 +1,11 @@
+<mat-toolbar>
+    <button mat-icon-button [ngClass]="''" aria-label='Menu' (click)='toggleSideMenu()'>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Order online is the new thing.</span>
+    <span [ngClass]="'spacer'"></span>
+    <button mat-icon-button (click)='printCart()'>
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+</mat-toolbar>
+<router-outlet></router-outlet>

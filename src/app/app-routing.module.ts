@@ -4,9 +4,9 @@ import { AdminBusinessInfoComponent } from './components/admin/admin-business-in
 import { AdminNavComponent } from './components/admin/admin-nav/admin-nav.component';
 import { AdminMenuCategoriesComponent } from './components/admin/admin-menu-categories/admin-menu-categories.component';
 import { AdminMenuItemsComponent } from './components/admin/admin-menu-items/admin-menu-items.component';
-import { MenuNavComponent } from './components/menu/menu-nav/menu-nav.component';
-import { MenuItemsComponent } from './components/menu/menu-items/menu-items.component';
-import { UserCartComponent } from './components/user/user-cart/user-cart.component';
+import { MenuNavComponent } from './components/business-main/menu-nav/menu-nav.component';
+import { UserCartComponent } from './components/business-main/user-cart/user-cart.component';
+import { BusinessMainComponent } from './components/business-main/business-main.component';
 
 const routes: Routes = [
   {
@@ -27,19 +27,23 @@ const routes: Routes = [
       },
     ],
   },
-  { 
-    path: '',
-    component: MenuNavComponent,
+  {
+    path: 'business',
+    component: BusinessMainComponent, // this is the component with the <router-outlet> in the template
     children: [
       {
-        path: '', // child route path
-        component: MenuItemsComponent,
+        path: '',
+        component: MenuNavComponent 
       },
       {
-        path: 'cart',
-        component: UserCartComponent,
+        path:'cart',
+        component: UserCartComponent
       },
-    ] 
+      {
+        path: 'bussines-menu-items',
+        component: AdminMenuItemsComponent,
+      },
+    ],
   },
   //{ path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
   //{ path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
