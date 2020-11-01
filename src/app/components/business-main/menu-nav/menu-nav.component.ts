@@ -1,5 +1,6 @@
 import { ViewChild } from '@angular/core';
 import { Input } from '@angular/core';
+import { HostListener } from '@angular/core';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav/sidenav';
 import { BusinessDataService } from 'src/app/services/business-data.service';
@@ -16,6 +17,7 @@ export class MenuNavComponent implements OnInit, AfterViewInit {
   @Input() drawerState;
   categories: any;
   selectedPage: string;
+  showTopTabs = false;
 
   constructor(private businessDataService: BusinessDataService, private navDrawerService: NavDrawerService) { }
   
@@ -24,8 +26,14 @@ export class MenuNavComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.showTopTabs = window.innerWidth >= 900;
     this.selectedPage = "Menu";
     this.categories = this.businessDataService.getMenuCategories(1);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {    
+    this.showTopTabs = window.innerWidth >= 900;
   }
 
   onSelectDrawerPage(page: any): void{

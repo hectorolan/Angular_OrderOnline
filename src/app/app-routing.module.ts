@@ -38,11 +38,7 @@ const routes: Routes = [
       {
         path:'cart',
         component: UserCartComponent
-      },
-      {
-        path: 'bussines-menu-items',
-        component: AdminMenuItemsComponent,
-      },
+      }
     ],
   },
   //{ path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
