@@ -4,7 +4,10 @@
     </button>
     <span>Order online is the new thing.</span>
     <span [ngClass]="'spacer'"></span>
-    <button mat-icon-button (click)='printCart()'>
+    <button mat-icon-button routerLink="/business">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/business/cart">
       <mat-icon>shopping_cart</mat-icon>
     </button>
 </mat-toolbar>
