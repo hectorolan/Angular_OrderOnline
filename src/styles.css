@@ -1,32 +1,56 @@
+/* Material Override */
+.mat-button-toggle-label-content {
+  font-size: 16px;
+}
+.mat-card {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  /* border-bottom: 1px solid #00000066; */
+  padding: 16px 0px !important;
+  margin: 0px 8px !important;
+}
+.mat-card-actions {
+  margin: -8px 0px !important;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+.mat-grid-tile .mat-figure {
+  justify-content: left !important;
+}
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.footer {
+  background-image: linear-gradient(#282828 ,#282828, #fff 90%);
+  height: 350px;
+}
 
 .spacer {
     flex: 1 1 auto;
 }
 
 .background-transparent {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .background-white {
   background-color: whitesmoke;
+}
+.background-dark {
+  background-color: #282828 !important;
 }
 
 .no-border {
   border: 0px;
 }
 
-.drawer {
-  top: 64px !important;
-  overflow-x: hidden;
-  overflow-y: hidden;
- }
-
  .max-size-content {
     max-width: 1500px;
+    min-height: 600px;
     margin: auto;
  }
  
@@ -47,11 +71,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   width: 100%;
 }
 
+.halfMaxWidth{
+  max-width: 750px;
+}
+
 .MainContent{
   max-width: 1500px;
 }
 
-/* Material Override */
-.mat-button-toggle-label-content {
-  font-size: 16px;
+.centered{
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }

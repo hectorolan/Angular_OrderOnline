@@ -1,0 +1,33 @@
+.order-cart-card {
+  margin-top: 16px;
+}
+
+.action-cart-card {
+  margin: 0 !important;
+}
+
+table {
+  width: 100%;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.mat-column-cost {
+  width: 60px !important;
+}
+
+.item {
+  min-height: 180px;
+}
+
+.img-item {
+  width: 180px;
+  display: inline-block;
+}
+
+.content-item {
+  padding: 8px;
+  display: inline-block;
+}

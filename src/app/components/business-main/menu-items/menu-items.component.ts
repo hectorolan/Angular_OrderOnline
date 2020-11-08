@@ -1,6 +1,7 @@
 import { Input, SimpleChanges } from '@angular/core';
 import { OnChanges } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { BusinessDataService } from 'src/app/services/business-data.service';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -15,7 +16,8 @@ export class MenuItemsComponent implements OnInit, OnChanges {
   @Input() category: string;
 
   constructor(private businessDataService: BusinessDataService,
-                private cartService: CartService) { }
+                private cartService: CartService,
+                private _snackBar: MatSnackBar) { }
 
   ngOnChanges(): void {
     this.updateList();
@@ -44,5 +46,6 @@ export class MenuItemsComponent implements OnInit, OnChanges {
       item.count = 1;
       this.cartService.items[item.id] = item;
     }
+    this._snackBar.open('Added to cart.',null,{duration:500,});
   }
 }

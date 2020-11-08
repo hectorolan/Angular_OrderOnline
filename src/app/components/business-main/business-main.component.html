@@ -1,14 +1,34 @@
-<mat-toolbar>
-    <button mat-icon-button [ngClass]="''" aria-label='Menu' (click)='toggleSideMenu()'>
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>Order online is the new thing.</span>
-    <span [ngClass]="'spacer'"></span>
-    <button mat-icon-button routerLink="/business">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <button mat-icon-button routerLink="/business/cart">
-      <mat-icon>shopping_cart</mat-icon>
-    </button>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<mat-drawer-container [ngClass]="['background-transparent']" [hasBackdrop]="true" fullscreen>
+  <!-- Side Drawer -->
+  <mat-drawer #drawer [mode]="'over'" [ngClass]="['background-white','no-border', 'side-drawer']">
+    <mat-selection-list #sidemenuselection [multiple]="false">
+      <mat-list-option [value]='category' *ngFor='let category of categories'
+        (click)='onSelectDrawerPage(category.category)'>
+        {{ category.category }}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-drawer>
+  <!-- Drawer Content -->
+  <mat-drawer-content [ngClass]="['background-transparent']" >
+    <mat-toolbar color="primary" class="background-dark">
+      <button *ngIf="showMenuButton" mat-icon-button [ngClass]="''" aria-label='Menu' (click)='toggleSideMenu()'>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Order online is the new thing.</span>
+      <span [ngClass]="'spacer'"></span>
+      <button mat-icon-button routerLink="/business">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-icon-button routerLink="/business/cart">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </mat-toolbar>
+    <!-- Router -->
+    <router-outlet></router-outlet>
+    <mat-divider></mat-divider>
+    <!-- Footer -->
+    <div class='footer background-dark'>
+      Footer
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

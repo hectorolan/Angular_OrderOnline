@@ -7,6 +7,7 @@ import { AdminMenuItemsComponent } from './components/admin/admin-menu-items/adm
 import { MenuNavComponent } from './components/business-main/menu-nav/menu-nav.component';
 import { UserCartComponent } from './components/business-main/user-cart/user-cart.component';
 import { BusinessMainComponent } from './components/business-main/business-main.component';
+import { UserInfoComponent } from './components/business-main/user-info/user-info.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
       {
         path:'cart',
         component: UserCartComponent
+      },
+      {
+        path:'submitorder',
+        component: UserInfoComponent
       }
     ],
   },

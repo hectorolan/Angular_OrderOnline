@@ -1,5 +1,6 @@
 import { HostListener } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { BusinessDataService } from 'src/app/services/business-data.service';
 import { CartService } from 'src/app/services/cart.service';
 import { NavDrawerService } from 'src/app/services/nav-drawer.service';
 
@@ -9,16 +10,21 @@ import { NavDrawerService } from 'src/app/services/nav-drawer.service';
   styleUrls: ['./business-main.component.css'],
 })
 export class BusinessMainComponent implements OnInit {
+  categories: any;
+
   constructor(
     private cartService: CartService,
-    private navDrawerService: NavDrawerService
-  ) {}
-  showMenuButton = false;
+    private navDrawerService: NavDrawerService,
+    private businessDataService: BusinessDataService
+  ) {
+  }  
 
   ngOnInit(): void {
     this.showMenuButton = window.innerWidth < 900;
+    this.categories = this.businessDataService.getMenuCategories(1);
   }
 
+  showMenuButton = false;
   @HostListener('window:resize', ['$event'])
   onResize(event) {    
     this.showMenuButton = window.innerWidth < 900;
@@ -28,10 +34,8 @@ export class BusinessMainComponent implements OnInit {
     this.navDrawerService.toggle();
   }
 
-  printCart() {
-    for (let key in this.cartService.items) {
-      let value = this.cartService.items[key];
-      console.log(value.name + ' count:' + value.count);
-    }
+  onSelectDrawerPage(page: any): void{
+    // TODo, navigate to the correct mpage
+    this.navDrawerService.close();
   }
 }
