@@ -15,9 +15,6 @@
 .mat-radio-button ~ .mat-radio-button {
   margin-left: 16px;
 }
-.mat-grid-tile .mat-figure {
-  justify-content: left !important;
-}
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -25,8 +22,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .footer {
-  background-image: linear-gradient(#282828 ,#282828, #fff 90%);
-  height: 350px;
+  height: 200px;
 }
 
 .spacer {
