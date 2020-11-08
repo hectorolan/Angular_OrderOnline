@@ -1,3 +1,25 @@
-.content{
-    height: 100px;
+.item-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 400px;
+    height: 320px;
+    margin: 16px 0;
+    background-color: #eeeeee50;
+    padding: 8px 16px;
+}
+
+.content {
+    flex: 1;
+    height: 80px;
+}
+
+.image{
+    width: 200px;
+    height: 200px;
 }

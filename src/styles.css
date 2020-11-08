@@ -66,6 +66,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .fullWidth{
   width: 100%;
 }
+.fullHeight{
+  height: 100%;
+}
 
 .halfMaxWidth{
   max-width: 750px;

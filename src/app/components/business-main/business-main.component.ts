@@ -1,8 +1,9 @@
-import { HostListener } from '@angular/core';
+import { HostListener, ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 import { BusinessDataService } from 'src/app/services/business-data.service';
 import { CartService } from 'src/app/services/cart.service';
-import { NavDrawerService } from 'src/app/services/nav-drawer.service';
 
 @Component({
   selector: 'app-business-main',
@@ -11,12 +12,12 @@ import { NavDrawerService } from 'src/app/services/nav-drawer.service';
 })
 export class BusinessMainComponent implements OnInit {
   categories: any;
+  @ViewChild('drawer') public drawer: MatSidenav;
 
   constructor(
     private cartService: CartService,
-    private navDrawerService: NavDrawerService,
-    private businessDataService: BusinessDataService
-  ) {
+    private businessDataService: BusinessDataService,
+    private router: Router) {
   }  
 
   ngOnInit(): void {
@@ -30,12 +31,9 @@ export class BusinessMainComponent implements OnInit {
     this.showMenuButton = window.innerWidth < 900;
   }
 
-  toggleSideMenu() {
-    this.navDrawerService.toggle();
-  }
-
   onSelectDrawerPage(page: any): void{
     // TODo, navigate to the correct mpage
-    this.navDrawerService.close();
+    this.router.navigate(['/business/'+page+'/']);
+    this.drawer.close();
   }
 }

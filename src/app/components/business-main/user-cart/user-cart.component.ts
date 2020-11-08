@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
-import { NavDrawerService } from 'src/app/services/nav-drawer.service';
 
 export interface Transaction {
   item: string;
@@ -17,7 +16,7 @@ export class UserCartComponent implements OnInit {
   displayedColumns: string[] = ['item', 'cost'];  
   items: any;
 
-  constructor(private navDrawerService: NavDrawerService, private cartService: CartService) { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     this.items = Object.values(this.cartService.items);

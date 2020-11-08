@@ -11,7 +11,7 @@
   <!-- Drawer Content -->
   <mat-drawer-content [ngClass]="['background-transparent']" >
     <mat-toolbar color="primary" class="background-dark">
-      <button *ngIf="showMenuButton" mat-icon-button [ngClass]="''" aria-label='Menu' (click)='toggleSideMenu()'>
+      <button *ngIf="showMenuButton" mat-icon-button [ngClass]="''" aria-label='Menu' (click)='drawer.toggle()'>
         <mat-icon>menu</mat-icon>
       </button>
       <span>Order online is the new thing.</span>

@@ -33,16 +33,20 @@ const routes: Routes = [
     component: BusinessMainComponent, // this is the component with the <router-outlet> in the template
     children: [
       {
-        path: '',
-        component: MenuNavComponent 
-      },
-      {
         path:'cart',
         component: UserCartComponent
       },
       {
         path:'submitorder',
         component: UserInfoComponent
+      },
+      {
+        path: ':menu',
+        component: MenuNavComponent 
+      },
+      {
+        path: '',
+        component: MenuNavComponent 
       }
     ],
   },
