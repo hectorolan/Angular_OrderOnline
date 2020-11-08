@@ -22,13 +22,21 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.footer {
-  height: 200px;
+a {
+  color: #011426;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+}
+
+/* selected link */
+a:active {
+  color: #7A99B7;
 }
 
 .spacer {
@@ -51,6 +59,7 @@ body {
 }
 
 .max-size-content {
+  padding-top: 16px;
   max-width: 1500px;
   min-height: 600px;
   margin: auto;
@@ -72,12 +81,13 @@ body {
 .fullWidth {
   width: 100%;
 }
+
 .fullHeight {
   height: 100%;
 }
 
-.halfMaxWidth {
-  max-width: 750px;
+.halfWidth {
+  width: 50%;
 }
 
 .MainContent {

@@ -9,7 +9,7 @@
     </mat-selection-list>
   </mat-drawer>
   <!-- Drawer Content -->
-  <mat-drawer-content [ngClass]="['background-transparent']" >
+  <mat-drawer-content [ngClass]="['background-transparent']">
     <mat-toolbar color="primary" class="background-dark">
       <button *ngIf="showMenuButton" mat-icon-button [ngClass]="''" aria-label='Menu' (click)='drawer.toggle()'>
         <mat-icon>menu</mat-icon>
@@ -17,7 +17,7 @@
       <span>Order online is the new thing.</span>
       <span [ngClass]="'spacer'"></span>
       <button mat-icon-button routerLink="/business">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>chrome_reader_mode</mat-icon>
       </button>
       <button mat-icon-button routerLink="/business/cart">
         <mat-icon>shopping_cart</mat-icon>
@@ -28,13 +28,10 @@
     <mat-divider></mat-divider>
     <!-- Footer -->
     <div class='footer'>
-      <mat-grid-list cols="1" rowHeight="250px">
-        <mat-grid-tile>
-        <div class="footer">
-          Footer
-        </div>  
-        </mat-grid-tile>
-      </mat-grid-list>
+      <div class='footer-nav'>
+        <a routerLink='/business/info'>Bussiness Information</a>
+        <a routerLink='/business/'>Menu</a>
+      </div>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>

@@ -1,27 +1,25 @@
-<div class="max-size-content" >
-    <mat-card class="order-cart-card">
+<div class="max-size-content">
+    <mat-card>
         <mat-card-header>
             <mat-card-title>Order Cart</mat-card-title>
         </mat-card-header>
-        <mat-card-content *ngIf='items.length>0'>
+        <mat-card-content *ngIf="items.length > 0">
             <table mat-table [dataSource]="items">
                 <!-- Item Column -->
                 <ng-container matColumnDef="item">
                     <!-- Header -->
-                    <th mat-header-cell *matHeaderCellDef> Item </th>
+                    <th mat-header-cell *matHeaderCellDef>Item</th>
                     <!-- Cell -->
                     <td mat-cell *matCellDef="let item">
-                        <div class='item'>
-                            <div class='img-item'>
-
-                            </div>
-                            <div class='content-item'>
-                                {{item.name}} - {{item.price | currency}}
-                                <br *ngIf='item.contains'>{{item.contains}}
-                                <br *ngIf='item.description'>{{item.description}}
-                                <br *ngIf='item.description'>{{item.description}}
-                                <br> Quantity:
-                                <select [value]="item.count" (change)='item.count=$event.target.value'>
+                        <div class="item">
+                            <div class="img-item"></div>
+                            <div class="content-item">
+                                {{ item.name }} - {{ item.price | currency }}
+                                <br *ngIf="item.contains" />{{ item.contains }}
+                                <br *ngIf="item.description" />{{ item.description }}
+                                <br *ngIf="item.description" />{{ item.description }} <br />
+                                Quantity:
+                                <select [value]="item.count" (change)="item.count = $event.target.value">
                                     <option [value]="1">1</option>
                                     <option [value]="2">2</option>
                                     <option [value]="3">3</option>
@@ -33,9 +31,11 @@
                                     <option [value]="9">9</option>
                                     <option [value]="10">10</option>
                                 </select>
-                                <br>
-                                <br>
-                                <button mat-stroked-button (click)='removeItem(item)'>Remove Item</button>
+                                <br />
+                                <br />
+                                <button mat-stroked-button (click)="removeItem(item)">
+                                    Remove Item
+                                </button>
                             </div>
                         </div>
                     </td>
@@ -45,23 +45,29 @@
 
                 <!-- Cost Column -->
                 <ng-container matColumnDef="cost">
-                    <th mat-header-cell *matHeaderCellDef> Price </th>
-                    <td mat-cell *matCellDef="let item"> {{item.price*item.count | currency}} </td>
-                    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+                    <th mat-header-cell *matHeaderCellDef>Price</th>
+                    <td mat-cell *matCellDef="let item">
+                        {{ item.price * item.count | currency }}
+                    </td>
+                    <td mat-footer-cell *matFooterCellDef>
+                        {{ getTotalCost() | currency }}
+                    </td>
                 </ng-container>
 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
                 <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
             </table>
         </mat-card-content>
         <!-- empty cart -->
-        <mat-card-content *ngIf='!items.length&&items.length==0'>
+        <mat-card-content *ngIf="!items.length && items.length == 0">
             <div class="centered">Oups, your cart is empty.</div>
         </mat-card-content>
-        <mat-card-actions class='action-cart-card'>
-            <button *ngIf='items.length>0' mat-stroked-button routerLink='/business/submitorder'>Submit Order</button>
-            <button mat-stroked-button routerLink='/business'>Back to Menu</button>
+        <mat-card-actions class="action-cart-card">
+            <button *ngIf="items.length > 0" mat-stroked-button routerLink="/business/submitorder">
+                Submit Order
+            </button>
+            <button mat-stroked-button routerLink="/business">Back to Menu</button>
         </mat-card-actions>
     </mat-card>
 </div>

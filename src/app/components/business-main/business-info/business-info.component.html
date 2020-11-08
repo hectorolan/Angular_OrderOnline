@@ -1,0 +1,62 @@
+<div class="max-size-content">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{businessInfo.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <span><br><span class='mat-h3'>Telephone</span><br>
+        {{businessInfo.telephone}}<br></span>
+
+      <span><br><span class='mat-h3'>Address</span><br>
+        {{businessInfo.city}}<br>
+        {{businessInfo.direction}}<br></span>
+
+      <span><br><span class='mat-h3'>Business Hours</span><br>
+        <!-- Table -->
+        <table style="width:400px">
+          <tr>
+            <th></th>
+            <th>Open</th>
+            <th>Closes</th>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>{{businessInfo.hours.sundayOpen}}</td>
+            <td>{{businessInfo.hours.sundayClose}}</td>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>{{businessInfo.hours.mondayOpen}}</td>
+            <td>{{businessInfo.hours.mondayClose}}</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>{{businessInfo.hours.tuesdayOpen}}</td>
+            <td>{{businessInfo.hours.tuesdayClose}}</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>{{businessInfo.hours.wednesdayOpen}}</td>
+            <td>{{businessInfo.hours.wednesdayClose}}</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>{{businessInfo.hours.thursdayOpen}}</td>
+            <td>{{businessInfo.hours.thursdayClose}}</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>{{businessInfo.hours.fridayOpen}}</td>
+            <td>{{businessInfo.hours.fridayClose}}</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>{{businessInfo.hours.saturdayOpen}}</td>
+            <td>{{businessInfo.hours.saturdayClose}}</td>
+          </tr>
+        </table>
+        <br>
+      </span>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -16,6 +16,7 @@ import { UserCartComponent } from './components/business-main/user-cart/user-car
 import { UserInfoComponent } from './components/business-main/user-info/user-info.component';
 import { MaterialModule } from './modules/material.module';
 import { BusinessMainComponent } from './components/business-main/business-main.component';
+import { BusinessInfoComponent } from './components/business-main/business-info/business-info.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BusinessMainComponent } from './components/business-main/business-main.
     MenuItemsComponent,
     UserCartComponent,
     UserInfoComponent,
+    BusinessInfoComponent,
   ],
   imports: [
     BrowserModule,
