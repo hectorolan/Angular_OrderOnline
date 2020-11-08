@@ -1,20 +1,20 @@
 [
-    {
-        "category": "Menu"
-    },
-    {
-        "category": "Breakfast"
-    },
-    {
-        "category": "Sandwiches"
-    },
-    {
-        "category": "Meals"
-    },
-    {
-        "category": "Drinks"
-    },
-    {
-        "category": "Deserts"
-    }
+  {
+    "category": "Menu"
+  },
+  {
+    "category": "Breakfast"
+  },
+  {
+    "category": "Sandwiches"
+  },
+  {
+    "category": "Meals"
+  },
+  {
+    "category": "Drinks"
+  },
+  {
+    "category": "Deserts"
+  }
 ]

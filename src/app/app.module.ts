@@ -17,7 +17,6 @@ import { UserInfoComponent } from './components/business-main/user-info/user-inf
 import { MaterialModule } from './modules/material.module';
 import { BusinessMainComponent } from './components/business-main/business-main.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +29,7 @@ import { BusinessMainComponent } from './components/business-main/business-main.
     MenuNavComponent,
     MenuItemsComponent,
     UserCartComponent,
-    UserInfoComponent
+    UserInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +37,9 @@ import { BusinessMainComponent } from './components/business-main/business-main.
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

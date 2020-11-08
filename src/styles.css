@@ -18,15 +18,21 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .footer {
   height: 200px;
 }
 
 .spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .background-transparent {
@@ -44,18 +50,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border: 0px;
 }
 
- .max-size-content {
-    max-width: 1500px;
-    min-height: 600px;
-    margin: auto;
- }
- 
- @media(max-width: 599px) {
-   .drawer {
-     top: 56px !important;
-   }
- }
-.side-drawer{
+.max-size-content {
+  max-width: 1500px;
+  min-height: 600px;
+  margin: auto;
+}
+
+@media (max-width: 599px) {
+  .drawer {
+    top: 56px !important;
+  }
+}
+.side-drawer {
   width: 250px;
 }
 
@@ -63,22 +69,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin: auto;
 }
 
-.fullWidth{
+.fullWidth {
   width: 100%;
 }
-.fullHeight{
+.fullHeight {
   height: 100%;
 }
 
-.halfMaxWidth{
+.halfMaxWidth {
   max-width: 750px;
 }
 
-.MainContent{
+.MainContent {
   max-width: 1500px;
 }
 
-.centered{
+.centered {
   text-align: center;
   align-items: center;
   margin-left: auto;

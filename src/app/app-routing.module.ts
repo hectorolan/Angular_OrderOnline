@@ -33,30 +33,30 @@ const routes: Routes = [
     component: BusinessMainComponent, // this is the component with the <router-outlet> in the template
     children: [
       {
-        path:'cart',
-        component: UserCartComponent
+        path: 'cart',
+        component: UserCartComponent,
       },
       {
-        path:'submitorder',
-        component: UserInfoComponent
+        path: 'submitorder',
+        component: UserInfoComponent,
       },
       {
         path: ':menu',
-        component: MenuNavComponent 
+        component: MenuNavComponent,
       },
       {
         path: '',
-        component: MenuNavComponent 
-      }
+        component: MenuNavComponent,
+      },
     ],
   },
   //{ path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
-  { path: '**',    redirectTo: '/business', pathMatch: 'full' },
+  { path: '**', redirectTo: '/business', pathMatch: 'full' },
   //{ path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
