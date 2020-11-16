@@ -1,0 +1,28 @@
+<mat-drawer-container [ngClass]="['background-transparent']" [hasBackdrop]="false" fullscreen>
+    <!-- Side Drawer -->
+    <mat-drawer #drawer [mode]="'side'" [ngClass]="['background-white','no-border', 'side-drawer']" opened>
+      <mat-selection-list #sidemenuselection [multiple]="false">
+        <mat-list-option [routerLink]='["/admin/"]'>Business Information</mat-list-option>
+        <mat-list-option [routerLink]='["/admin/categories"]'>Menu Categories</mat-list-option>
+        <mat-list-option [routerLink]='["/admin/items"]'>Menu Items</mat-list-option>
+      </mat-selection-list>
+    </mat-drawer>
+    <!-- Drawer Content -->
+    <mat-drawer-content [ngClass]="['background-transparent']">
+      <mat-toolbar color="primary" class="background-dark">
+        <span>Business Toolbar Name</span>
+        <span [ngClass]="'spacer'"></span>
+      </mat-toolbar>
+      <!-- Router -->
+      <div class="max-size-content">
+        <router-outlet></router-outlet>
+      </div>
+      <mat-divider></mat-divider>
+      <!-- Footer -->
+      <div class='footer'>
+        <div class='footer-nav'>
+          <a class="withTab">Log Out</a><a class="withTab">Go to Menu</a>
+        </div>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>

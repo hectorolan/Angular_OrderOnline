@@ -17,7 +17,6 @@
 }
 
 /* You can add global styles to this file, and also import other style files */
-
 html,
 body {
   height: 100%;
@@ -37,6 +36,19 @@ a {
 /* selected link */
 a:active {
   color: #7A99B7;
+}
+
+.footer {
+  width: 100%;
+  padding: 24px 0px;
+}
+
+.footer-nav{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin:auto;
+  align-content: center;
 }
 
 .spacer {
@@ -60,6 +72,7 @@ a:active {
 
 .max-size-content {
   padding-top: 16px;
+  padding-bottom: 175px;
   max-width: 1500px;
   min-height: 600px;
   margin: auto;
@@ -92,6 +105,10 @@ a:active {
 
 .MainContent {
   max-width: 1500px;
+}
+
+.withTab{
+  padding-right: 5em;
 }
 
 .centered {

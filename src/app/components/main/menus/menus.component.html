@@ -1,0 +1,12 @@
+<div class="menu-list">
+    <div class="menu centered" *ngFor='let business of businesses'>
+        <a  [routerLink]="['/business', business.id]">
+            <div class='image'></div>
+            <!--<img mat-card-image src='https://material.angular.io/assets/img/examples/shiba2.jpg' alt='Photo of a Shiba Inu'>-->
+            <div class='content'>
+                <span>{{ business.name }}</span>
+                <span><br>{{ business.city }}</span>
+            </div>
+        </a>
+    </div>
+</div>

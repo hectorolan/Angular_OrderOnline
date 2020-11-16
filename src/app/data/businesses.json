@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "name": "Lore Pi Farum",
+    "telephone": "787-123-4567",
+    "city": "San Juan",
+    "direction": "Ave Qwerty 152 Carr 2",
+    "hours": {
+      "sundayOpen": "close",
+      "sundayClose": "close",
+      "mondayOpen": "8:00am",
+      "mondayClose": "3:00pm",
+      "tuesdayOpen": "8:00am",
+      "tuesdayClose": "3:00pm",
+      "wednesdayOpen": "8:00am",
+      "wednesdayClose": "3:00pm",
+      "thursdayOpen": "8:00am",
+      "thursdayClose": "3:00pm",
+      "fridayOpen": "8:00am",
+      "fridayClose": "3:00pm",
+      "saturdayOpen": "close",
+      "saturdayClose": "close"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Lore Pi Farum",
+    "telephone": "787-123-4567",
+    "city": "San Juan",
+    "direction": "Ave Qwerty 152 Carr 2",
+    "hours": {
+      "sundayOpen": "close",
+      "sundayClose": "close",
+      "mondayOpen": "8:00am",
+      "mondayClose": "3:00pm",
+      "tuesdayOpen": "8:00am",
+      "tuesdayClose": "3:00pm",
+      "wednesdayOpen": "8:00am",
+      "wednesdayClose": "3:00pm",
+      "thursdayOpen": "8:00am",
+      "thursdayClose": "3:00pm",
+      "fridayOpen": "8:00am",
+      "fridayClose": "3:00pm",
+      "saturdayOpen": "close",
+      "saturdayClose": "close"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Lore Pi Farum",
+    "telephone": "787-123-4567",
+    "city": "San Juan",
+    "direction": "Ave Qwerty 152 Carr 2",
+    "hours": {
+      "sundayOpen": "close",
+      "sundayClose": "close",
+      "mondayOpen": "8:00am",
+      "mondayClose": "3:00pm",
+      "tuesdayOpen": "8:00am",
+      "tuesdayClose": "3:00pm",
+      "wednesdayOpen": "8:00am",
+      "wednesdayClose": "3:00pm",
+      "thursdayOpen": "8:00am",
+      "thursdayClose": "3:00pm",
+      "fridayOpen": "8:00am",
+      "fridayClose": "3:00pm",
+      "saturdayOpen": "close",
+      "saturdayClose": "close"
+    }
+  }
+]

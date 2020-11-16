@@ -1,42 +1,39 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminBusinessInfoComponent } from './components/admin/admin-business-info/admin-business-info.component';
-import { AdminNavComponent } from './components/admin/admin-nav/admin-nav.component';
 import { AdminMenuCategoriesComponent } from './components/admin/admin-menu-categories/admin-menu-categories.component';
 import { AdminMenuItemsComponent } from './components/admin/admin-menu-items/admin-menu-items.component';
 import { MenuNavComponent } from './components/business-main/menu-nav/menu-nav.component';
 import { UserCartComponent } from './components/business-main/user-cart/user-cart.component';
 import { BusinessMainComponent } from './components/business-main/business-main.component';
 import { UserInfoComponent } from './components/business-main/user-info/user-info.component';
-import { BusinessInfoComponent } from './components/business-main/business-info/business-info.component';
+import { MainComponent } from './components/main/main.component';
+import { HomeComponent } from './components/main/home/home.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   {
     path: 'admin',
-    component: AdminNavComponent, // this is the component with the <router-outlet> in the template
+    component: AdminComponent, // this is the component with the <router-outlet> in the template
     children: [
       {
-        path: 'business-info', // child route path
+        path: '', // child route path
         component: AdminBusinessInfoComponent,
       },
       {
-        path: 'bussines-menu-categories',
+        path: 'categories',
         component: AdminMenuCategoriesComponent,
       },
       {
-        path: 'bussines-menu-items',
+        path: 'items',
         component: AdminMenuItemsComponent,
       },
     ],
   },
   {
-    path: 'business',
+    path: 'business/:id',
     component: BusinessMainComponent, // this is the component with the <router-outlet> in the template
     children: [
-      {
-        path: 'info',
-        component: BusinessInfoComponent,
-      },
       {
         path: 'cart',
         component: UserCartComponent,
@@ -53,10 +50,21 @@ const routes: Routes = [
         path: '',
         component: MenuNavComponent,
       },
+      { path: '**', redirectTo: '', pathMatch: 'full' },
+    ],
+  },
+  {
+    path: '',
+    component: MainComponent,
+    children: [
+      {
+        path: '', // child route path
+        component: HomeComponent,
+      },
     ],
   },
   //{ path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
-  { path: '**', redirectTo: '/business', pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
   //{ path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 

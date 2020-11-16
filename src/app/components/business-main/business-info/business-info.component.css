@@ -1,0 +1,10 @@
+.business-content {
+    display: flex;
+    justify-content: space-around;
+    background: #bbb;
+    flex-wrap: wrap;
+}
+
+th {
+    text-align: left;
+}

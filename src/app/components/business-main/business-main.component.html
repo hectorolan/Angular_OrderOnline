@@ -1,8 +1,8 @@
-<mat-drawer-container [ngClass]="['background-transparent']" [hasBackdrop]="true" fullscreen>
+<mat-drawer-container [ngClass]="['background-transparent']" [hasBackdrop]="true" fullscreen *ngIf="data">
   <!-- Side Drawer -->
   <mat-drawer #drawer [mode]="'over'" [ngClass]="['background-white','no-border', 'side-drawer']">
     <mat-selection-list #sidemenuselection [multiple]="false">
-      <mat-list-option [value]='category' *ngFor='let category of categories'
+      <mat-list-option [value]='category' *ngFor='let category of data.categories'
         (click)='onSelectDrawerPage(category.category)'>
         {{ category.category }}
       </mat-list-option>
@@ -16,21 +16,25 @@
       </button>
       <span>Order online is the new thing.</span>
       <span [ngClass]="'spacer'"></span>
-      <button mat-icon-button routerLink="/business">
+      <button *ngIf="data.businessId"  mat-icon-button [routerLink]="['/business', data.businessId]" >
         <mat-icon>chrome_reader_mode</mat-icon>
       </button>
-      <button mat-icon-button routerLink="/business/cart">
+      <button mat-icon-button [routerLink]="['/business', data.businessId, 'cart']">
         <mat-icon>shopping_cart</mat-icon>
       </button>
     </mat-toolbar>
     <!-- Router -->
-    <router-outlet></router-outlet>
+      <div class="max-size-content">
+        <router-outlet></router-outlet>
+      </div>
+    <mat-divider></mat-divider>
+    <!-- Business Information -->
+    <app-bussiness-info></app-bussiness-info>
     <mat-divider></mat-divider>
     <!-- Footer -->
     <div class='footer'>
       <div class='footer-nav'>
-        <a routerLink='/business/info'>Bussiness Information</a>
-        <a routerLink='/business/'>Menu</a>
+        <a *ngIf="data.businessId" [routerLink]="['/business', data.businessId]">Menu</a>
       </div>
     </div>
   </mat-drawer-content>

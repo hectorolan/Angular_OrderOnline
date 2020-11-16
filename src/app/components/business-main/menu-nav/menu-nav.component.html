@@ -10,6 +10,4 @@
 <mat-toolbar [ngClass]="['background-transparent']" *ngIf='!showTopTabs'>
     {{selectedPage}}
 </mat-toolbar>
-<div class='max-size-content'>
-    <app-menu-items [category]="selectedPage"></app-menu-items>
-</div>
+<app-menu-items [category]="selectedPage"></app-menu-items>
