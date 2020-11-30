@@ -38,6 +38,18 @@ a:active {
   color: #7A99B7;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .footer {
   width: 100%;
   padding: 24px 0px;
@@ -108,7 +120,7 @@ a:active {
 }
 
 .withTab{
-  padding-right: 5em;
+  padding-right: 16px;
 }
 
 .centered {

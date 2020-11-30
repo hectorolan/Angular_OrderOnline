@@ -20,6 +20,7 @@ import { HomeComponent } from './components/main/home/home.component';
 import { MenusComponent } from './components/main/menus/menus.component';
 import { MainComponent } from './components/main/main.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { OnlyNumberDirective } from './directives/only-number.directive';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AdminComponent } from './components/admin/admin.component';
     MenusComponent,
     MainComponent,
     AdminComponent,
+    OnlyNumberDirective,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,7 @@ import { AdminComponent } from './components/admin/admin.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

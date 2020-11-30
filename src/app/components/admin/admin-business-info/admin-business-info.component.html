@@ -3,10 +3,262 @@
         <mat-card-title>Business Information</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <p>admin-business-info works!</p>
+        <!--{
+            "id": 1,
+            "name": "Lore Pi Farum",
+            "telephone": "787-123-4567",
+            "city": "San Juan",
+            "direction": "Ave Qwerty 152 Carr 2",
+            "hours": {
+              "sundayOpen": "close",
+              "sundayClose": "close",
+              "mondayOpen": "8:00am",
+              "mondayClose": "3:00pm",
+              "tuesdayOpen": "8:00am",
+              "tuesdayClose": "3:00pm",
+              "wednesdayOpen": "8:00am",
+              "wednesdayClose": "3:00pm",
+              "thursdayOpen": "8:00am",
+              "thursdayClose": "3:00pm",
+              "fridayOpen": "8:00am",
+              "fridayClose": "3:00pm",
+              "saturdayOpen": "close",
+              "saturdayClose": "close"
+            }-->
+        <form class="halfWidth">
+            <section>
+                <mat-checkbox [formControl]="menuVisibleFormControl" name="menuVisibleFormControl">Visible to public
+                </mat-checkbox>
+            </section>
+            <mat-form-field class="fullWidth">
+                <mat-label>Business Name</mat-label>
+                <input type="text" matInput [formControl]="businessNameFormControl" autocomplete="off"
+                    name="businessNameFormControl" placeholder="Name of your business.">
+                <mat-error *ngIf="businessNameFormControl.hasError('required')">
+                    Business Name <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <!-- Telephone -->
+            <mat-form-field class="fullWidth">
+                <mat-label>Telephone</mat-label>
+                <span matPrefix>+1 &nbsp;</span>
+                <input type="number" matInput [formControl]="telephoneFormControl" numbersOnly autocomplete="off"
+                    placeholder="787-555-1234">
+                <mat-error *ngIf="telephoneFormControl.hasError('required')">
+                    Telephone <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <!-- City -->
+            <mat-form-field class="fullWidth">
+                <mat-label>City</mat-label>
+                <mat-select [formControl]="cityFormControl" name="city">
+                    <mat-option [value]="">- Select City -</mat-option>
+                    <mat-option *ngFor="let city of cities" [value]="city">
+                        {{city}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="cityFormControl.hasError('required')">
+                    City <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <!-- Direction -->
+            <mat-form-field class="fullWidth">
+                <mat-label>Direction</mat-label>
+                <textarea matInput [formControl]="directionFormControl"></textarea>
+                <mat-error *ngIf="directionFormControl.hasError('required')">
+                    City <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <!-- Business Hours -->
+            <h3>Business Hours</h3>
+            <table style="width:300px">
+                <tr>
+                    <td>
+                        <!-- Sunday -->
+                        <span class="withTab">Sunday</span>
+                    </td>
+                    <td>
+                        <mat-form-field class="withTab">
+                            <mat-label>Open</mat-label>
+                            <mat-select [formControl]="sundayOpenFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Close</mat-label>
+                            <mat-select [formControl]="sundayCloseFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Monday -->
+                        <span class="withTab">Monday</span>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Open</mat-label>
+                            <mat-select [formControl]="mondayOpenFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Close</mat-label>
+                            <mat-select [formControl]="mondayCloseFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Tuesday -->
+                        <span class="withTab">Tuesday</span>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Open</mat-label>
+                            <mat-select [formControl]="tuesdayOpenFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Close</mat-label>
+                            <mat-select [formControl]="tuesdayCloseFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Wednesday -->
+                        <span class="withTab">Wednesday</span>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Open</mat-label>
+                            <mat-select [formControl]="wednesdayOpenFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Close</mat-label>
+                            <mat-select [formControl]="wednesdayCloseFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Thursday -->
+                        <span class="withTab">Thursday</span>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Open</mat-label>
+                            <mat-select [formControl]="thursdayOpenFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Close</mat-label>
+                            <mat-select [formControl]="thursdayCloseFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Friday -->
+                        <span class="withTab">Friday</span>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Open</mat-label>
+                            <mat-select [formControl]="fridayOpenFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Close</mat-label>
+                            <mat-select [formControl]="fridayCloseFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Saturday -->
+                        <span class="withTab">Saturday</span>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Open</mat-label>
+                            <mat-select [formControl]="saturdayOpenFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Close</mat-label>
+                            <mat-select [formControl]="saturdayCloseFormControl" name="hour">
+                                <mat-option *ngFor="let hour of hours" [value]="hour">
+                                    {{hour}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>Save</button>
-        <button mat-button>Cancel</button>
+        <button mat-button (click)="savePage()">Save</button>
+        <button mat-button (click)="resetPage()">Cancel</button>
     </mat-card-actions>
 </mat-card>
