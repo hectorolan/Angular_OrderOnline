@@ -1,0 +1,36 @@
+Make sure you have the prerequisites
+Our library requires Node.js version 0.10, 0.12, or 4.
+
+Create an environment variable
+Update your development environment with your SENDGRID_API_KEY. Run the following in your shell:
+echo "export SENDGRID_API_KEY='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'" > sendgrid.env
+echo "sendgrid.env" >> .gitignore
+source ./sendgrid.env
+
+Install the package
+The following recommended installation requires npm. If you are unfamiliar with npm, see the npm docs. Npm comes installed with Node.js since node version 0.8.x, therefore you likely already have it:
+npm install --save @sendgrid/mail
+
+Send your first email
+The following is the minimum needed code to send an email:
+
+// using Twilio SendGrid's v3 Node.js Library
+// https://github.com/sendgrid/sendgrid-nodejs
+javascript
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+const msg = {
+  to: 'test@example.com', // Change to your recipient
+  from: 'test@example.com', // Change to your verified sender
+  subject: 'Sending with SendGrid is Fun',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+}
+sgMail
+  .send(msg)
+  .then(() => {
+    console.log('Email sent')
+  })
+  .catch((error) => {
+    console.error(error)
+  })

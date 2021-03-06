@@ -1,0 +1,15 @@
+.item-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex-basis:300px;
+    height: 320px;
+    margin: 16px 0;
+    background-color: #eeeeee50;
+    padding: 8px 16px;
+}
